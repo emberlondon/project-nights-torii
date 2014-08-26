@@ -1,0 +1,5 @@
+{{#if session.isWorking}}
+  Authenticating…
+{{else}}
+  <button {{action "authenticate"}}>Authenticate with GitHub</button>
+{{/if}}

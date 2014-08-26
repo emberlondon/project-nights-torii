@@ -15,6 +15,16 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    torii: {
+      providers: {
+        github: {
+          clientId: process.env.GITHUB_CLIENT_ID,
+          redirectUri: 'http://localhost:4200/callback'
+        }
+      },
+      sessionServiceName: 'session'
     }
   };
 

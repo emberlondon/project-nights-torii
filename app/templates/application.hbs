@@ -1,3 +1,13 @@
-<h2 id='title'>Welcome to Ember.js</h2>
+<header role="banner">
+  <h1>Project Nights</h1>
 
-{{outlet}}
+  <nav role="navigation">
+    {{#if session.isAuthenticated}}
+      <button {{action "deauthenticate"}}>Sign out</button>
+    {{/if}}
+  </nav>
+</header>
+
+<main role="main">
+  {{outlet}}
+</main>
