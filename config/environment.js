@@ -21,7 +21,7 @@ module.exports = function(environment) {
       providers: {
         github: {
           clientId: process.env.GITHUB_CLIENT_ID,
-          redirectUri: 'http://localhost:4200/callback'
+          redirectUri: 'http://localhost:4200/'
         }
       },
       sessionServiceName: 'session'
