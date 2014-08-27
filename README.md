@@ -13,9 +13,9 @@ This is a toy app for exploring [Torii](https://github.com/Vestorly/torii).
 
 2. [Register an app with GitHub](https://github.com/settings/applications/new).
 
-   Fill in `Authorization callback URL` with `http://localhost:4200/`.
+   Fill in **Authorization callback URL** with `http://localhost:4200/`.
 
-   Takes note of *Client ID* and *Client Secret*.
+   Takes note of **Client ID** and **Client Secret**.
 
 ## Run
 
