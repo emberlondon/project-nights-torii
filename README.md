@@ -1,51 +1,36 @@
-# Project-nights
+# Project Nights Torii
 
-This README outlines the details of collaborating on this Ember application.
+This is a toy app for exploring [Torii](https://github.com/Vestorly/torii).
 
-A short introduction of this app could easily go here.
+## Setup
 
-## Prerequisites
+1. Install dependencies
 
-You will need the following things properly installed on your computer.
+   ```sh
+   $ npm install
+   $ bower install
+   ```
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM) and [Bower](http://bower.io/)
+2. [Register an app with GitHub](https://github.com/settings/applications/new).
 
-## Installation
+   Fill in `Authorization callback URL` with `http://localhost:4200/`.
 
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
+   Takes note of *Client ID* and *Client Secret*.
 
-## Running / Development
+## Run
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+1. Boot Ember CLI’s development server:
 
-### Code Generators
+   ```sh
+   $ GITHUB_CLIENT_ID=yourclientid GITHUB_CLIENT_SECRET=yourclientsecret ember serve
+   ```
 
-Make use of the many generators for code, try `ember help generate` for more details
+   Alternatively you can export the environment variable into your shell:
 
-### Running Tests
+   ```sh
+   $ export GITHUB_CLIENT_ID=yourclientid
+   $ export GITHUB_CLIENT_SECRET=yourclientsecret
+   $ ember serve
+   ```
 
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* ember: http://emberjs.com/
-* ember-cli: http://www.ember-cli.com/
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+2. Visit `http://localhost:4200/`.
