@@ -84,19 +84,19 @@ At the time of writing Torii expectes to find its configuration in
 
 Torii provides a lightweight `Session` object. It is injected into routes,
 controllers and views as the property specified by `sessionServiceName`.
-If no `sessionServiceName` is specified the session is **not** injected.
+If no `sessionServiceName` is specified the session is *not* injected.
 
 ## GitHub Torii Provider
 
-Provider know how to initiate an auth flow for third party services. For this
-example, we create a GitHub provider in `app/torii-providers/github.js`.
-Providers must implement an `open` method that returns a promise. The promise
-should resolve with authentication data received from the third party or
-reject with an error if something goes wrong.
+Providers are responible for initiatiating auth flows with third party
+services. For this example, we create a GitHub provider in
+`app/torii-providers/github.js`. Providers must implement an `open` method that
+returns a promise. The promise should resolve with authentication data received
+from the third party or reject with an error if something goes wrong.
 
 Typically, initiating an OAuth flow with a third party involves opening a popup
 window pointed at the OAuth authorization URL. In GitHub’s case, the URL is
-`https://github.com/login/oauth/authorize'. Torii provides an abstraction for
+`https://github.com/login/oauth/authorize`. Torii provides an abstraction for
 this process, available as `popup` on the provider.
 
 To open a popup window, we call `open` on the popup object passing two

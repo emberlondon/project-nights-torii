@@ -18,12 +18,14 @@ module.exports = function(environment) {
     },
 
     torii: {
+      // Torii’s configurable function makes these available in the provider.
       providers: {
         github: {
           clientId: process.env.GITHUB_CLIENT_ID,
           redirectUri: 'http://localhost:4200/'
         }
       },
+      // If sessionServiceName is not set, service will not be injected.
       sessionServiceName: 'session'
     }
   };
